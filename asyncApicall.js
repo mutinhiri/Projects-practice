@@ -39,5 +39,8 @@ const reducer = (state = initialState, action) => {
       users: action.payload,
       error: ''
     }
+    case FETCH_USERS_ERROR: return [
+      
+    ]
   }
 }
