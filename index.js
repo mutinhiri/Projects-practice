@@ -1,6 +1,8 @@
 const redux = require('redux')
 const createStore = redux.createStore
 const combineReducers = redux.combineReducers
+const reduxLogger = require('redux-logger')
+const logger = reduxLogger.createLogger()
 
 
 const BUY_CAKE = 'BUY_CAKE'
