@@ -26,3 +26,5 @@ const reducer = (state, action) => {
 }
 
 const store = createStore(reducer)
+console.log('store:', store.getState())
+store.subscribe(()=> console.log('updates state' , store.getState()))
