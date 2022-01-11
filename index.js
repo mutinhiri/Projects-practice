@@ -25,7 +25,7 @@ const initialIceCreanState = {
   numOfIceCreams: 20
 }
 
-const cakeReducer = (state= initialState, action) => {
+const cakeReducer = (state= initialCakeState, action) => {
   switch (action.type) {
     case BUY_CAKE: return {
       ...state, numOfCakes: state.numOfCakes -1
@@ -33,6 +33,14 @@ const cakeReducer = (state= initialState, action) => {
     default: return state
   }
 
+}
+
+const iceCreamReducer = (state = initialIceCreanState, action) => {
+  switch (action.type) {
+    case BUY_ICECREAM: return {
+      ...state, numOfIceCreams: state.numOfIceCreams - 1
+    }
+  }
 }
 
 const store = createStore(reducer)
@@ -43,4 +51,3 @@ store.dispatch(buyCake())
 store.dispatch(buyCake())
 store.dispatch(buyIceCream())
 unsubscribe()
-
