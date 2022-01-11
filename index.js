@@ -6,3 +6,7 @@ function buyCake() {
       info: 'hello redux'
     }
 }
+
+const initialState = {
+  numOfCakes: 10
+} 
