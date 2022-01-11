@@ -17,18 +17,18 @@ function buyIceCream() {
     type : BUY_ICECREAM
   }
 }
-const initialState = {
-  numOfCakes: 10,
-  numOfIceCreams: 20
+const initialCakeState = {
+  numOfCakes: 10
 } 
 
-const reducer = (state= initialState, action) => {
+const initialIceCreanState = {
+  numOfIceCreams: 20
+}
+
+const cakeReducer = (state= initialState, action) => {
   switch (action.type) {
     case BUY_CAKE: return {
       ...state, numOfCakes: state.numOfCakes -1
-    }
-    case BUY_ICECREAM: return {
-      ...state, numOfIceCreams: state.numOfIceCreams -1
     }
     default: return state
   }
