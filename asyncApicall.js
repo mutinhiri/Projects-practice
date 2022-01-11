@@ -1,7 +1,8 @@
 const redux = require('redux')
 const createStore = redux.createStore
 const applyMiddleware = redux.applyMiddleware
-const thunkMiddleware = require('redux-thunk')
+const thunkMiddleware = require('redux-thunk').default
+const axios = require('axios')
 
 const FETCH_USERS_REQUEST = 'FETCH_USERS_REQUEST'
 const FETCH_USERS_SUCCESS = 'FETCH_USERS_SUCCESS'
@@ -52,4 +53,7 @@ const reducer = (state = initialState, action) => {
   }
 }
 
-const store = createStore(reducer, applyMiddleware())
+const fetchUsers = () => {
+  
+}
+const store = createStore(reducer, applyMiddleware(thunkMiddleware))
