@@ -9,5 +9,8 @@ const iceCreamReducer = (state = initialState, action) => {
     case BUY_ICECREAM: return {
       ...state, numOfIceCreams: state.numOfIceCreams
     }
+    default: return state
   }
 }
+
+export default iceCreamReducer
