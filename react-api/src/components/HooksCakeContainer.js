@@ -5,7 +5,7 @@ function HooksCakeContainer() {
   const numOfCakes = useSelector(state =>state.numOfCakes)
   return (
     <div>
-      <h2>Num of Cakes -</h2>
+      <h2>Num of Cakes -{ numOfCakes}</h2>
       <button>Buy cake</button>
     </div>
   )
