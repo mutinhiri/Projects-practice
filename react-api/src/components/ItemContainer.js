@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 function ItemContainer(props) {
   return (
@@ -16,4 +17,4 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-export default ItemContainer
+export default connect(mapStateToProps) (ItemContainer)
