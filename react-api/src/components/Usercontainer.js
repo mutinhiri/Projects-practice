@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { fetchUsers } from '../redux/user/userActions'
 
-function Usercontainer({usrtData, fetchUsers}) {
+function Usercontainer({userData, fetchUsers}) {
   useEffect(() => {
     fetchUsers()
   }, [])
@@ -29,7 +29,10 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => {
-  fetchUsers: () => dispatch(fetchUsers())
+  return {
+     fetchUsers: () => dispatch(fetchUsers())
+  }
+ 
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Usercontainer)
